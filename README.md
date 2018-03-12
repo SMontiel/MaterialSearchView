@@ -8,16 +8,16 @@ Cute library to implement SearchView in a Material Design Approach. *Works from 
        src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
 </a>
 
-#Native version
+# Native version
 Maybe it would be useful to take a look into the new official approach
 http://www.materialdoc.com/search-filter/
 
 # Usage
 **Add the dependencies to your gradle file:**
-```javascript
-	dependencies {
-    	compile 'com.miguelcatalan:materialsearchview:1.4.0'
-	}
+```groovy
+    dependencies {
+        compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    }
 ```
 **Add MaterialSearchView to your layout file along with the Toolbar** *(Add this block at the bottom of your layout, in order to display it over the rest of the view)*:
 
@@ -43,7 +43,7 @@ http://www.materialdoc.com/search-filter/
 
 **Add the search item into the menu file:**
 ```xml
-	<item
+    <item
         android:id="@+id/action_search"
         android:icon="@drawable/ic_action_action_search"
         android:orderInCategory="100"
@@ -52,8 +52,8 @@ http://www.materialdoc.com/search-filter/
 ```
 **Add define it in the *onCreateOptionsMenu*:**
 ```java
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
         MenuItem item = menu.findItem(R.id.action_search);
@@ -94,7 +94,7 @@ http://www.materialdoc.com/search-filter/
 # Use VoiceSearch
 **Allow/Disable it in the code:**
 ```java
-	searchView.setVoiceSearch(true); //or false
+    searchView.setVoiceSearch(true); //or false
 ```
 **Handle the response:**
 ```java
@@ -127,7 +127,7 @@ http://www.materialdoc.com/search-filter/
 ```
 **Add them to the object:**	
 ```java
-	searchView.setSuggestions(getResources().getStringArray(R.array.query_suggestions));
+    searchView.setSuggestions(getResources().getStringArray(R.array.query_suggestions));
 ```
 # Style it!
 ```xml
@@ -170,13 +170,13 @@ http://www.materialdoc.com/search-filter/
 ```	
 **And add it to the object:**
 ```java
-	searchView.setCursorDrawable(R.drawable.custom_cursor);
+    searchView.setCursorDrawable(R.drawable.custom_cursor);
 ```    
 
 # Using AppBarLayout?
 It is a little bit tricky but can be achieved using this:
 ```xml
-	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
